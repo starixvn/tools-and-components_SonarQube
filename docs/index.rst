@@ -84,7 +84,7 @@ a. For projects using **jest**:
 	
 	This command will run test, generate unit test result and coverage report (lcov).
 
-b. For projects using **angular \+ karmar**:
+b. For projects using **angular \+ karma**:
 
 * **In your project**: install the plugins **karma-coverage-istanbul-reporter** and **karma-sonarqube-unit-reporter**:
 
