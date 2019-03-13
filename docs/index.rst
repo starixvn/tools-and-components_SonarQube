@@ -15,7 +15,23 @@ JavaScript
 
 a. For projects using **jest**:
 
-	Add an **Execute Windows batch command** build step behind the step **Build a Visual Studio project or solution using MSBuild** in the Build section as below:
+* **In your project**: install the package **jest-sonar-reporter**:
+
+::
+
+	npm i -D jest-sonar-reporter
+
+Configure Jest in your **package.json** to use jest-sonar-reporter as a custom results processor:
+
+::
+
+	{
+	  "jest": {
+		"testResultsProcessor": "jest-sonar-reporter"
+	  }
+	}
+
+* **In Jenkins Job**: add an **Execute Windows batch command** build step behind the step **Build a Visual Studio project or solution using MSBuild** in the Build section as below:
 
 .. image:: _static/js-jest-coverage.png
 
@@ -71,7 +87,23 @@ TypeScript
 
 a. For projects using **jest**:
 
-	Add an **Execute Windows batch command** build step behind the step **Build a Visual Studio project or solution using MSBuild** in the Build section as below:
+* **In your project**: install the package **jest-sonar-reporter**:
+
+::
+
+	npm i -D jest-sonar-reporter
+
+Configure Jest in your **package.json** to use jest-sonar-reporter as a custom results processor:
+
+::
+
+	{
+	  "jest": {
+		"testResultsProcessor": "jest-sonar-reporter"
+	  }
+	}
+
+* **In Jenkins Job**: add an **Execute Windows batch command** build step behind the step **Build a Visual Studio project or solution using MSBuild** in the Build section as below:
 
 .. image:: _static/ts-jest-coverage.png
 
@@ -86,7 +118,7 @@ a. For projects using **jest**:
 
 b. For projects using **angular \+ karma**:
 
-* **In your project**: install the plugins **karma-coverage-istanbul-reporter** and **karma-sonarqube-unit-reporter**:
+* **In your project**: install the packages **karma-coverage-istanbul-reporter** and **karma-sonarqube-unit-reporter**:
 
 ::
 
